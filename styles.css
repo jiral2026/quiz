@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap');
+
+*, *::before, *::after {
+    box-sizing:border-box;
+    font-family: 'Sora', sans-serif;
+}
+
+:root {
+    --hue-neutral: 59;
+    --hue-wrong: 3;
+    --hue-correct: 138;
+}
+
+body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height:100vh;
+    background-color: hsl(var(--hue), 42%, 86%);
+}
+
+.score-container {
+    float: right;
+    height: 2px;
+}
+
+.container {
+    align-self: center;
+    align-items: center;
+    width: 900px;
+    max-width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 15px 1px;
+}
+
+.container1 {
+    padding-left: 20px;
+    position: relative;
+    display: flex;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat (2, auto);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.btn {
+    --hue: var(--hue-neutral);
+    border: 2px solid;
+    border-color: #945104;
+    border-radius: 7px;
+    background-color: hsl(var(--hue), 63%, 79%);
+    padding: 7px 9px;
+    color:#b86302;       
+}
+
+.btn:hover {
+    border-color: #FFC246;
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+}
+
+.start-btn, .next-btn {
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.control-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
